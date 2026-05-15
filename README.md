@@ -8,6 +8,8 @@ O modelo 3D ja esta incluido no projeto em:
 models/dodge-charger-srt.glb
 ```
 
+Link do modelo no Sketchfab: https://skfb.ly/puI9R
+
 ## Preview
 
 O projeto apresenta:
