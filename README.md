@@ -84,7 +84,7 @@ A porta pode variar. Use sempre o endereco aberto pelo Live Server.
 - `style.css`: cria o visual grafite noturno, o painel lateral, os cards e o layout responsivo.
 - `main.js`: inicializa a cena 3D, camera, renderer, luzes, controles, asfalto, carregamento do modelo e animacao.
 
-## Principais Funcões
+## Principais Funcoes
 
 - `carregarModeloDodge()`: carrega `./models/dodge-charger-srt.glb` com `GLTFLoader`.
 - `prepararModelo(modeloCarro)`: ativa sombras e ajusta texturas do modelo.
@@ -93,6 +93,6 @@ A porta pode variar. Use sempre o endereco aberto pelo Live Server.
 - `ajustarTamanhoDaCena()`: atualiza camera e renderer quando a janela muda de tamanho.
 - `animarCena()`: executa o loop de renderizacao com `requestAnimationFrame`.
 
-## Observação
+## Observacao
 
 Evite abrir o `index.html` diretamente pelo navegador usando `file://`. Use o Live Server para garantir que o Three.js e o modelo `.glb` sejam carregados corretamente.

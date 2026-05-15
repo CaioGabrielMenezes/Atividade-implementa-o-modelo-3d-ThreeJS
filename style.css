@@ -1,0 +1,281 @@
+:root {
+  color-scheme: dark;
+  --fundo: #07080a;
+  --painel: rgba(15, 16, 20, 0.94);
+  --painel-secundario: rgba(28, 30, 36, 0.86);
+  --painel-borda: rgba(255, 255, 255, 0.12);
+  --texto: #f7f2ec;
+  --texto-suave: #c4c0ba;
+  --laranja-srt: #ff7a1a;
+  --laranja-claro: #ffb36b;
+  --grafite: #20232a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 72% 38%, rgba(255, 122, 26, 0.18), transparent 32%),
+    linear-gradient(140deg, #050609 0%, #14171c 44%, #08090c 100%);
+  color: var(--texto);
+  overflow: hidden;
+}
+
+.showroom {
+  display: grid;
+  grid-template-columns: minmax(340px, 430px) 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.painel-info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 34px;
+  background:
+    linear-gradient(180deg, rgba(255, 122, 26, 0.05), transparent 22%),
+    var(--painel);
+  border-right: 1px solid var(--painel-borda);
+  box-shadow: 24px 0 64px rgba(0, 0, 0, 0.42);
+  overflow-y: auto;
+}
+
+.cabecalho-info {
+  display: grid;
+  gap: 18px;
+}
+
+.etiqueta {
+  width: fit-content;
+  margin: 0;
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 122, 26, 0.5);
+  border-radius: 4px;
+  color: var(--laranja-claro);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 4vw, 4.45rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.descricao {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cards-info {
+  display: grid;
+  gap: 12px;
+}
+
+.card-info {
+  min-height: 126px;
+  padding: 16px 17px;
+  border: 1px solid var(--painel-borda);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 122, 26, 0.08), transparent 45%),
+    linear-gradient(135deg, var(--painel-secundario), rgba(13, 14, 18, 0.94));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.card-info span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--laranja-srt);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.card-info h2 {
+  margin: 0;
+  color: var(--texto);
+  font-size: 1rem;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.card-info p {
+  margin: 8px 0 0;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  line-height: 1.48;
+}
+
+.painel-controles {
+  padding: 18px;
+  border: 1px solid rgba(255, 122, 26, 0.26);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 122, 26, 0.12), rgba(255, 122, 26, 0.02)),
+    rgba(10, 11, 14, 0.86);
+}
+
+.painel-controles h2 {
+  margin: 0 0 14px;
+  color: var(--texto);
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.painel-controles ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.painel-controles li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 10px;
+  align-items: start;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.painel-controles strong {
+  color: var(--laranja-claro);
+}
+
+.area-3d {
+  position: relative;
+  min-width: 0;
+  height: 100vh;
+  background:
+    radial-gradient(circle at 52% 42%, rgba(255, 122, 26, 0.34), transparent 25%),
+    radial-gradient(circle at 56% 66%, rgba(255, 179, 107, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(255, 122, 26, 0.1) 0%, transparent 28%),
+    linear-gradient(145deg, #07080b 0%, #171a20 45%, #08090c 100%);
+  overflow: hidden;
+}
+
+.area-3d::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 8%, rgba(255, 178, 92, 0.1) 8% 8.4%, transparent 8.4% 16%),
+    linear-gradient(90deg, transparent 0 26%, rgba(255, 178, 92, 0.12) 26% 26.35%, transparent 26.35% 41%),
+    linear-gradient(90deg, transparent 0 63%, rgba(255, 178, 92, 0.1) 63% 63.35%, transparent 63.35% 78%),
+    linear-gradient(90deg, transparent 0 88%, rgba(255, 178, 92, 0.12) 88% 88.35%, transparent 88.35% 100%),
+    linear-gradient(180deg, transparent 0 54%, rgba(4, 5, 7, 0.72) 54% 100%);
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.area-3d::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 6%;
+  height: 32%;
+  background:
+    radial-gradient(ellipse at center, rgba(255, 122, 26, 0.26), transparent 62%),
+    linear-gradient(90deg, transparent, rgba(255, 122, 26, 0.12), transparent);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+#canvas-3d {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.mensagem-carregamento {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  max-width: min(520px, calc(100% - 32px));
+  padding: 12px 16px;
+  border: 1px solid var(--painel-borda);
+  border-radius: 6px;
+  background: rgba(8, 9, 13, 0.84);
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.mensagem-carregamento.oculta {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+
+  .showroom {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(520px, 66vh);
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .painel-info {
+    padding: 24px;
+    border-right: 0;
+    border-bottom: 1px solid var(--painel-borda);
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 12vw, 4.2rem);
+  }
+
+  .cards-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .area-3d {
+    height: auto;
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 560px) {
+  .painel-info {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .cards-info {
+    grid-template-columns: 1fr;
+  }
+
+  .painel-controles li {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}

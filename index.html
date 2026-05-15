@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodge Charger SRT 3D Experience</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="showroom">
+    <section class="painel-info" aria-label="Informacoes do Dodge Charger SRT">
+      <div class="cabecalho-info">
+        <p class="etiqueta">Cena urbana noturna</p>
+        <h1>Dodge Charger SRT 3D Experience</h1>
+        <p class="descricao">
+          Um visualizador 3D interativo para explorar o Dodge Charger SRT em uma atmosfera escura, quente e cinematográfica.
+        </p>
+      </div>
+
+      <div class="cards-info" aria-label="Destaques">
+        <article class="card-info">
+          <span>01</span>
+          <h2>Motor V8 Supercharged</h2>
+          <p>Representa a proposta de alto desempenho das versões SRT, com foco em força e aceleração.</p>
+        </article>
+        <article class="card-info">
+          <span>02</span>
+          <h2>Estilo muscle car</h2>
+          <p>Design inspirado nos clássicos muscle cars americanos, com carroceria robusta e visual agressivo.</p>
+        </article>
+        <article class="card-info">
+          <span>03</span>
+          <h2>Visual esportivo SRT</h2>
+          <p>Detalhes marcantes, postura baixa e presença forte em um ambiente de showroom digital.</p>
+        </article>
+        <article class="card-info">
+          <span>04</span>
+          <h2>Modelo 3D interativo</h2>
+          <p>O usuário pode girar, aproximar e mover a câmera livremente usando OrbitControls.</p>
+        </article>
+        <article class="card-info">
+          <span>05</span>
+          <h2>Iluminação de showroom</h2>
+          <p>A cena usa luz ambiente e luz direcional para destacar o modelo 3D.</p>
+        </article>
+        <article class="card-info">
+          <span>06</span>
+          <h2>Projeto com Three.js</h2>
+          <p>Implementado com Three.js, GLTFLoader, OrbitControls, HTML, CSS e JavaScript.</p>
+        </article>
+      </div>
+
+      <div class="painel-controles" aria-label="Instrucoes de uso do visualizador 3D">
+        <h2>Controles</h2>
+        <ul>
+          <li><strong>Girar</strong><span>Arraste com o botão esquerdo ou toque na tela.</span></li>
+          <li><strong>Zoom</strong><span>Use o scroll do mouse ou gesto de pinça.</span></li>
+          <li><strong>Pan</strong><span>Use o botão direito para mover a câmera.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="area-3d" aria-label="Visualizador 3D do Dodge Charger SRT">
+      <canvas id="canvas-3d"></canvas>
+      <div id="mensagem-carregamento" class="mensagem-carregamento">Carregando modelo 3D...</div>
+    </section>
+  </main>
+
+  <script type="module" src="./main.js?v=6"></script>
+</body>
+</html>
